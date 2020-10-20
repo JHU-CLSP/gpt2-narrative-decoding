@@ -20,6 +20,9 @@ We also include a `count_length.py` script which calculates the average length o
 ## Training
 
 ## Generation
+TODO: write-up our basic generation procedure. Alexandra: point to specific scripts (incl. antiLM scripts)
+
+We include our Maximum Mutual Information (MMI) antiLM generation scripts. Note however that this runs on a modified version of the huggingface transformers generation code. We have submitted a [pull request](https://github.com/huggingface/transformers/pull/7931) to include diverse decoding. You may find our implementation there.
 
 ## Baseline
 We use the [fusion model](https://github.com/pytorch/fairseq/blob/master/examples/stories/README.md) from fairseq. We download and apply their dataset and their trained model. We only modify the generation scripts to generate outputs of different lengths and using different p-values. As p=0 was not a valid hyperparameter, we use a separate script to generate in that case (`generate_argmax.sh`). These may be found in the `baselines` folder.
