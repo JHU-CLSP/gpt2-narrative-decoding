@@ -3,6 +3,7 @@ Alexandra DeLucia\*, Aaron Mueller\*, Xiang "Lisa" Li, João Sedoc
 
 This repository contains code for replicating the approach and results of the paper [Decoding Strategies for Neural Narrative Generation](https://arxiv.org/abs/2010.07375).
 
+
 ## Models
 Our GPT-2 Medium models fine-tuned on the medium and large datasets are available on the library. If you would like the GPT-2 Small model, please reach out to Alexandra DeLucia.
 
@@ -29,3 +30,16 @@ We include our Maximum Mutual Information (MMI) antiLM generation script (`gener
 
 ## Baseline
 We use the [fusion model](https://github.com/pytorch/fairseq/blob/master/examples/stories/README.md) from fairseq. We download and apply their dataset and their trained model. We only modify the generation scripts to generate outputs of different lengths and using different p-values. As p=0 was not a valid hyperparameter, we use a separate script to generate in that case (`generate_argmax.sh`). These may be found in the `baselines` folder.
+
+## References
+If you use the materials in this repository or our models in a research work, please use the following citation:
+```
+@misc{delucia2020decoding,
+	title={Decoding Methods for Neural Narrative Generation}, 
+	author={Alexandra DeLucia and Aaron Mueller and Xiang Lisa Li and João Sedoc},
+	year={2020},
+	eprint={2010.07375},
+	archivePrefix={arXiv},
+	primaryClass={cs.CL}
+}
+```
