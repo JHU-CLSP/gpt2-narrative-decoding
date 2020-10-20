@@ -10,13 +10,6 @@ This repository contains code for replicating the approach and results of the pa
 	- baseline (done)
 	- GPT-2
 
-## Models
-Our models are on the Hugging Face library. Only the GPT-2 medium model fine-tuned on the medium and large datasets are available on the library. If you would like the small model, please reach out to us (the authors).
-
-```python
-model = AutoModel.from_pretrained("aadelucia/GPT2_medium_narrative_finetuned_medium")
-```
-
 ## Preprocessing
 Our preprocessing script may be found in `data/preproc.py`. To replicate our setup, download the [writingPrompts dataset](https://dl.fbaipublicfiles.com/fairseq/data/writingPrompts.tar.gz) and unzip the .tar into  the `data` folder.
 
