@@ -22,6 +22,8 @@ We also include a `count_length.py` script which calculates the average length o
 ## Generation
 TODO: write-up our basic generation procedure. Alexandra: point to specific scripts (incl. antiLM scripts)
 
+The generation script is `gener
+
 We include our Maximum Mutual Information (MMI) antiLM generation scripts. Note however that this runs on a modified version of the huggingface transformers generation code. We have submitted a [pull request](https://github.com/huggingface/transformers/pull/7931) to include diverse decoding. You may find our implementation there.
 
 ## Baseline
