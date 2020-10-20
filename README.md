@@ -15,6 +15,8 @@ Our preprocessing script may be found in `data/preproc.py`. To replicate our set
 
 This script will generate a series of prompts and responses of various lengths. All outputs with the `.comb*` suffix contain the prompt and response together; `.src*` files contain only prompts, and `.trg*` files contain only responses. If there is no number after the suffix, it is the large dataset (full responses). `*.1` files are short datasets (1 paragraph), and `*.3` files are medium datasets (3 paragraphs). While this script does not impose a token cutoff, we impose a cutoff in the training script by thresholding the maximum sequence length.
 
+We also include a `count_length.py` script which calculates the average length of prompt/response pairs per-dataset as well as the total number of tokens per-dataset (replicating the results of our Table 2).
+
 ## Training
 
 ## Generation
