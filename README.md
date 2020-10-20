@@ -22,7 +22,9 @@ We also include a `count_length.py` script which calculates the average length o
 ## Generation
 TODO: write-up our basic generation procedure. Alexandra: point to specific scripts (incl. antiLM scripts)
 
-The generation script is `gener
+The generation script is `script_generate_medium_responses.sh`, which calls the `generate_responses.py` script to generate the responses from the fine-tuned GPT-2 model on all responses lengths (small, medium, large). This script can be used with GPT-2 small by changing the `--model-name-or-path` option. 
+
+The script was run on the Center for Language and Speech Processing (CLSP) cluster at Johns Hopkins University, where we had access to special features such as "job arrays" (`$SGE_TASK_ID`). 
 
 We include our Maximum Mutual Information (MMI) antiLM generation scripts. Note however that this runs on a modified version of the huggingface transformers generation code. We have submitted a [pull request](https://github.com/huggingface/transformers/pull/7931) to include diverse decoding. You may find our implementation there.
 
